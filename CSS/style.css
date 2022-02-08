@@ -1,0 +1,116 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+}
+main {
+    width: 80%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+}
+main div {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 5px rgb(0, 0, 0, .1);
+}
+h2,
+p:last-of-type {
+    margin: 10px;
+}
+.daniel {
+    background-color: hsl(263, 55%, 52%);
+    color: #fff;
+    grid-column: 1 / 3;
+    position: relative;
+}
+.daniel::after {
+    content: url("../images/bg-pattern-quotation.svg");
+    position: absolute;
+    top: 0%;
+    right: 20%;
+}
+.jonathan {
+    background-color: hsl(217, 19%, 35%);
+    color: #fff;
+    grid-column: 3 / 4;
+}
+.kira {
+    background-color: #fff;
+    grid-area: 1 / 4 / 3 / 5;
+}
+.jeanette {
+    background-color: #fff;
+    grid-area: 2 / 1 / 3 / 2;
+}
+.patrick {
+    color: #fff;
+    background-color: hsl(219, 29%, 14%);
+    grid-column: 2 / 4;
+}
+header {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: 10px;
+}
+.patrick img,
+.daniel img {
+    border: 2px solid hsl(263, 55%, 60%);
+}
+.ver-g {
+    align-self: flex-end;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+}
+main p {
+    opacity: .5;
+}
+main div p:last-of-type {
+    quotes: open-quote;
+}
+svg {
+    position: absolute;
+    right: 20%;
+    top: 0%;
+}
+main .daniel h2 {
+    z-index: 2;
+    position: relative;
+}
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        padding: 10px;
+        row-gap: 10px;
+    }
+    .daniel {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .jonathan {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .kira {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .jeanette {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .patrick {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+}
